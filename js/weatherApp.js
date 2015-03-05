@@ -16,13 +16,13 @@ $(document).ready(function(){
   });
 
   function callJsonObj(city){
+    weather = (($('.icon').attr('class')).split(" "))[1];
     $.getJSON('http://weather-api.herokuapp.com/temperature?city=' + city, function(data){
-      console.log(data);
       var temperature = data.temp;
       $('.temperature').text(temperature);
       $('img').attr('src', 'images/' + data.outlook + '.svg');
-      $('body').removeClass();
-      $('body').addClass(data.outlook);
+      $('.icon').removeClass(weather);
+      $('.icon').addClass(data.outlook);
     });  
   };
 });
