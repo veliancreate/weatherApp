@@ -1,6 +1,31 @@
-$.getJSON('http://whateverorigin.org/get?url=' + encodeURIComponent('http://weather-api.herokuapp.com/cities') + '&callback=?', function(data){
-  console.log(data.contents);
+$.getJSON('http://weather-api.herokuapp.com/cities', function(data){
+
+  var apiData = data.cities;
+
+  var weatherIcon = 'snow';
+  $.each(apiData, function(index, city) {
+  console.log(apiData[city])
+  $('.cities').append(
+    $('<option></option>').val(city).html(city + " ⌄")
+    );
+  });
+
+  $('img').attr('src', 'images/' + weatherIcon + '.svg')
 });
+
+$.getJSON('http://weather-api.herokuapp.com/temperature?city=london', function(data){
+    console.log(data)
+    var temperature = data.temp;
+    $('.temperature').text(temperature);
+});
+
+
+
+
+
+
+
+
 
 
 
@@ -18,13 +43,3 @@ $.getJSON('http://whateverorigin.org/get?url=' + encodeURIComponent('http://weat
 // });
 
 
-// var temperature = 22;
-// var weatherIcon = 'snow';
-// $.each(apiData, function(index, city) {
-//   console.log(apiData[city])
-//   $('.cities').append(
-//     $('<option></option>').val(city).html(city + " ⌄")
-//   );
-// });
-// $('.temperature').text(temperature);
-// $('img').attr('src', 'images/' + weatherIcon + '.svg')
