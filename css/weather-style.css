@@ -30,6 +30,7 @@ img {
 
 .temperature {
   display: block;
+  margin-left: 2em;
   font-size: 6em;
   font-weight: bold;
   text-align: center;
@@ -55,6 +56,30 @@ img {
   background-color: #309aec;
 }
 
+.sunnyBackground
+{
+  background-image: url('https://addons.opera.com/media/image-cache/themes/15/62115/1.0-rev1/images/f69902c6-2e6f-4c96-91a9-a570e0050f3c_details_big.jpe');
+  background-size: cover;
+}
+
+.cloudyBackground
+{
+  background-image: url('http://images2.layoutsparks.com/1/194091/stormy-day-cloudy-sky.jpg');
+  background-size: cover;
+}
+
+.snowBackground
+{
+  background-image: url('http://fc01.deviantart.net/fs71/i/2013/016/f/4/trees_and_snow_background_by_burtn-d5rnuny.jpg');
+  background-size: cover;
+}
+
+.rainBackground
+{
+  background-image: url('http://random-international.com/wp-content/uploads/2013/05/rain-room-at-moma-10.jpg');
+  background-size: cover;
+}
+
 select {
    -webkit-appearance: none;
    -moz-appearance: none;
@@ -62,10 +87,10 @@ select {
    border: none;
    background: none;
    font-size: 1.75em;
-   margin: 0;
    text-align: center;
-   margin-left: 2.5em;
    color: #9b9b9b;
+   margin-left: 50px;
+   text-transform: capitalize;
 }
 
 .shadow {
