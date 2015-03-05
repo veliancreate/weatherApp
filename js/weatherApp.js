@@ -4,7 +4,6 @@ $.getJSON('http://weather-api.herokuapp.com/cities', function(data){
 
   var weatherIcon = 'snow';
   $.each(apiData, function(index, city) {
-  console.log(apiData[city])
   $('.cities').append(
     $('<option></option>').val(city).html(city + " ⌄")
     );
@@ -13,12 +12,19 @@ $.getJSON('http://weather-api.herokuapp.com/cities', function(data){
   $('img').attr('src', 'images/' + weatherIcon + '.svg')
 });
 
-$.getJSON('http://weather-api.herokuapp.com/temperature?city=london', function(data){
-    console.log(data)
-    var temperature = data.temp;
-    $('.temperature').text(temperature);
+$('.cities').click(function() {
+  var city = $(this).val();
+  callJsonObj(city);
 });
 
+
+function callJsonObj(city){
+  $.getJSON('http://weather-api.herokuapp.com/temperature?city=' + city, function(data){
+    console.log(data);
+    var temperature = data.temp;
+    $('.temperature').text(temperature);
+  });  
+};
 
 
 
