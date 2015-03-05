@@ -61,11 +61,11 @@ select {
    appearance: none;
    border: none;
    background: none;
-   font-size: 1.75em;
-   margin: 0;
+   font-size: 1.4em;
+   margin-left: 50px;
    text-align: center;
-   margin-left: 2.5em;
    color: #9b9b9b;
+   text-transform: capitalize;
 }
 
 .shadow {
