@@ -23,13 +23,8 @@ $(document).ready(function(){
       $('img').attr('src', 'images/' + data.outlook + '.svg');
       $('.icon').removeClass(weather);
       $('.icon').addClass(data.outlook);
+      $('body').removeClass(weather + 'Background');
+      $('body').addClass(data.outlook + 'Background')
     });  
   };
 });
-
-
-
-
-
-
-
