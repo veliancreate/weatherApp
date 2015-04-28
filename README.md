@@ -5,7 +5,7 @@ The user can select a city and the page will update with that cities weather inf
 
 # Pair Partner
 
-For this task I pair programmed with [Julian Veling](https://github.com/veliancreate)
+For this task I pair programmed with [Julian Veling](https://github.com/veliancreate). 
 We were able to complete the specification and also add in dynamically updating backgrounds, which are relevant to the weather type.
 
 # ScreenShots
