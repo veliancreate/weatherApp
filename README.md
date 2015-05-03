@@ -1,6 +1,6 @@
 # weatherApp
 
-Exercise in using Jquery get requests. An example API was set up which contained cites, with various weather related data.
+Exercise using Jquery get requests. An example API was set up which contained cites, with various weather related data.
 The user can select a city and the page will update with that cities weather information.
 
 # Pair Partner
